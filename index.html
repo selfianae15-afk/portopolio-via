@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Saya 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff5fa;
+      color: #444;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      padding: 50px 20px 30px;
+      background: linear-gradient(180deg, #ffe6ef, #fff5fa);
+      box-shadow: 0 2px 10px rgba(255, 182, 193, 0.3);
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ff80b5;
+      box-shadow: 0 0 15px rgba(255, 128, 181, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 128, 181, 0.8);
+    }
+
+    h1 {
+      margin-top: 15px;
+      font-size: 28px;
+      color: #ff4f9c;
+    }
+
+    p.subtitle {
+      font-size: 16px;
+      color: #ff80b5;
+      margin-top: 5px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px 60px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 20px;
+      width: 260px;
+      box-shadow: 0 4px 12px rgba(255, 128, 181, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px rgba(255, 102, 178, 0.4);
+    }
+
+    .card h2 {
+      color: #ff4f9c;
+    }
+
+    a {
+      color: #ff4f9c;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      background-color: #ff66b2;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #ff85c1;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #ff66b2;
+      border-top: 1px solid #ffd6e6;
+      background-color: #fff0f7;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsif */
+    @media (max-width: 600px) {
+      .card {
+        width: 90%;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      p.subtitle {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Ganti "foto.jpg" dengan nama file fotomu -->
+    <img src="pia.jpg" alt="Foto Profil" class="profile-pic">
+    <h1>Selviana 🌸</h1>
+    <p class="subtitle">Mahasiswa ITBM | Calon Web Developer</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>👤 Tentang Saya</h2>
+      <p>hai aku via mahasiswi yang suka ngulik hal-hal seru didunia web dan desain aku tu suka banget sama warna pink! kadang ngoding sambil ngelamun sambil nyemil tapi intinya aku selalu semangat belajar dan ingin berkembang setiap harinya.</p>
+    </div>
+
+    <div class="card">
+      <h2>⚙ Keahlian</h2>
+      <ul style="text-align:left; color:#555;">
+        <li>HTML, CSS, JavaScript</li>
+        <li>React, Vue, Tailwind</li>
+        <li>Node.js, Express</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>📁 Proyek</h2>
+      <p>Portfolio saya mencakup berbagai proyek seperti website e-commerce, dashboard admin, dan landing page interaktif.</p>
+    </div>
+
+    <div class="card">
+      <h2>📞 Kontak</h2>
+      <p>Email: <a href="mailto:kamu@email.com">selfiana.e15@email.com</a></p>
+      <p>LinkedIn: <a href="#">linkedin.com/in/via</a></p>
+      <button onclick="window.location.href='mailto:selfiana.e15@email.com'">Hubungi Saya</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Selviana | Dibuat dengan 💖 dan semangat belajar
+  </footer>
+
+  <script>
+    // Animasi kartu muncul bergantian
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.2}s`;
+    });
+  </script>
+</body>
+</html>
